@@ -1,0 +1,149 @@
+{
+	"info": {
+		"_postman_id": "807b3349-5bda-42cf-9265-598bd02bd112",
+		"name": "Liveasy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32523969"
+	},
+	"item": [
+		{
+			"name": "Save load",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"loadingPoint\": \"Delhi\",\r\n\t\"unloadingPoint\": \"Jaipur\",\r\n\t\"productType\": \"Chemicals\",\r\n\t\"truckType\": \"Canter\",\r\n\t\"noOfTrucks\": 1,\r\n\t\"weight\": 100,\r\n   \"comment\":\"\",\r\n\t\"shipperId\": \"shipper:12345678-1234-5678-1234-567812345678\",\r\n\t\"date\": \"01-01-2023\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/load",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"load"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get loads by shipper_id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/load?shipperId=shipper:12345678-1234-5678-1234-567812345678",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"load"
+					],
+					"query": [
+						{
+							"key": "shipperId",
+							"value": "shipper:12345678-1234-5678-1234-567812345678"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete load",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/load/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"load",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get load",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/load/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"load",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update load",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"loadingPoint\": \"Delhi\",\r\n\t\"unloadingPoint\": \"Jaipur\",\r\n\t\"productType\": \"Chemicals\",\r\n\t\"truckType\": \"Canter\",\r\n\t\"noOfTrucks\": 1,\r\n\t\"weight\": 100,\r\n     \"comment\":\"\",\r\n     \"shipperId\": \"shipper:12345678-1234-5678-1234-\",\r\n\t\"date\": \"01-01-2023\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/load/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"load",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
